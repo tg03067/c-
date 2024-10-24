@@ -1,0 +1,7 @@
+# Visual Studio 관련 파일
+.vs/
+*.suo
+*.user
+*.db
+bin/
+obj/

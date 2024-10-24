@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>API Data</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul id="userList"></ul>
+
+    <script>
+        fetch('https://localhost:5001/User')
+        .then(response => response.json())
+        .then(data => {
+            let userList = document.getElementById('userList');
+            data.forEach(user => {
+                let li = document.createElement('li');
+                li.textContent = `ID: ${user.id}, Name: ${user.name}`;
+                userList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
